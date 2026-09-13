@@ -48,6 +48,11 @@ application {
     mainClass = "de.pizzabot.AppKt"
 }
 
+tasks.named<JavaExec>("run") {
+    // Pass keyboard input through to the app, so "gradlew run" can read the pizza order.
+    standardInput = System.`in`
+}
+
 tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
