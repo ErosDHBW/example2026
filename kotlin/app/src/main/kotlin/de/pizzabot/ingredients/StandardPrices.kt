@@ -18,6 +18,7 @@ object StandardPrices : Prices {
         is Ham -> 0.79
         is Mozzarella -> 0.79
         is Pineapple -> 99.99
+        is Salami -> 0.69
         is TomatoSauce -> 0.29
         is Tuna -> 1.09
         else -> throw UnknownPriceableException()

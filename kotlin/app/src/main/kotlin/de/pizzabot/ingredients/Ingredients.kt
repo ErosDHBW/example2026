@@ -6,7 +6,7 @@ object Ingredients {
         Cheese(),
         Mozzarella(),
         Salami(),
-//        Ham(),
+        Ham(),
         Tuna(),
         Pineapple(),
     )

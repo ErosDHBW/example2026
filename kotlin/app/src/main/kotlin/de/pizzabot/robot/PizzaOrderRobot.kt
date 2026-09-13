@@ -55,12 +55,10 @@ class PizzaOrderRobot(val display: Display, val input: Input, val prices: Prices
         display.displayBillLine("-- TOTAL:", total)
     }
 
-    private fun calculateTotal(pizza: Pizza, dough: Dough, extras: Collection<Ingredient>): Double {
+    private fun calculateTotal(pizza: Pizza, dough: Dough, extras: Collection<Ingredient>) =
         prices.getPriceFor(pizza) + prices.getPriceFor(dough) + extras.fold(0.0) { acc, e ->
             acc + prices.getPriceFor(e)
         }
-        return 0.0
-    }
 
     private fun collectExtras(): Collection<Ingredient> =
         collectMultiple("Choose an extra topping: ", extrasChoices)
